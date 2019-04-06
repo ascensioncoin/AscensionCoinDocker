@@ -51,3 +51,5 @@ rpcpassword=SomePassword
 `ascensiond listtransactions` - lists input/output transactions
 
 `ascensiond help` - shows a list of other useful commands
+
+`exit` - to exit from ascension Docker container
