@@ -43,7 +43,11 @@ rpcpassword=SomePassword
 
 
 ## Useful commands
+
 `ascensiond getinfo` - get info about ascension blockchain
+
 `ascensiond getaccountaddress ""` - get wallet address
+
 `ascensiond listtransactions` - lists input/output transactions
+
 `ascensiond help` - shows a list of other useful commands
