@@ -16,7 +16,7 @@ docker build . -t asn
 ```
 
 
-## Run docker container
+## Run docker container [easy way]
 
 We want to retain the ascensioncoin blockchain data out of the docker container.
 That's why we need to map some folder on the host filesystem (`/tmp/AscensionBlockchain` in this example) to `/root` folder inside docker.
@@ -24,14 +24,18 @@ That's why we need to map some folder on the host filesystem (`/tmp/AscensionBlo
 Everything that you store inside the `/root` folder while running docker, will be retained.
 
 ```
-docker run --rm -it -v /tmp/AscensionBlockchain:/root --entrypoint /bin/bash asn
+docker run --rm -it -v /tmp/AscensionBlockchain:/root asn
 ```
 
 
-## Once you are inside docker / starting ascension daemon
+## Run docker container [hard way, advanced]
+
+You may want to skip automatically executing run.sh, which simplifies a few things for you. Execute this:
+```
+docker run --rm -it -v /tmp/AscensionBlockchain:/root --entrypoint /bin/bash asn
+```
 
 Use your favourite terminal program to issue commands to Ubuntu 14.04 running inside docker.
-When you start, you will be inside `/root` folder, which is also `~` (as you are `root` user).
 
 You need to execute `ascension -daemon` to start Ascension daemon. Ascension will store all blockchain data in `~/.ascension`  (or `/root/.ascension`). Note: folders that start with `.` are hidden folder in Linux. You will not see them if you just do `ls`... Execute `ls -a` to see hidden folders.
 
