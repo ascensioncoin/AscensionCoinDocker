@@ -5,7 +5,8 @@ Docker that runs ascension coin daemon
 
 ## Prerequisites
 
-install docker
+1) Install docker [https://www.docker.com/get-started]
+2) Decide where you want to store Ascension blockchain files on your PC (which folder).
 
 
 ## Build docker container
